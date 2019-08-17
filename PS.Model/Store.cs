@@ -8,7 +8,7 @@ namespace PS.Model
 {
     public class Store:PetBase
     {
-        public string Description { get; set; }
-        public IEnumerable<Pet> Pets { get; set; }
+        public Showroom Showroom { get; set; }
+        public Backyard Backyard { get; set; }
     }
 }
