@@ -54,6 +54,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PS.Manager\PS.Manager.csproj">
+      <Project>{C9B24A55-513F-4592-ACFB-71DC53A19B62}</Project>
+      <Name>PS.Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PS.Model\PS.Model.csproj">
+      <Project>{f45edd5a-833e-45e6-8857-9149562aa66c}</Project>
+      <Name>PS.Model</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PS.Utility\PS.Utility.csproj">
       <Project>{9ecea8c1-3dc0-4d71-a01a-7ae6333ed1c3}</Project>
       <Name>PS.Utility</Name>

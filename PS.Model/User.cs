@@ -3,9 +3,8 @@ using System;
 
 namespace PS.Model
 {
-    public class User
+    public class User: PetBase
     {
-        public long Id { get; set; }
         public string Name { get; set; }
         public string Address { get; set; }
         public string SSN { get; set; } //SSN = Social Security Number

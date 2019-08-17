@@ -1,8 +1,9 @@
-﻿using System;
+﻿using PS.Utility;
+using System;
 
 namespace PS.Model
 {
-    public class Pet
+    public class Pet: PetBase
     {
         public string Name { get; set; }
         public DateTime DateOfBirth { get; set; }
@@ -10,5 +11,7 @@ namespace PS.Model
         public DateTime InplanteDate { get; set; }
         public long Price { get; set; }
         public string Description { get; set; }
+        public bool IsSold { get; set; }
+        public PetTypes PetType { get; set; }
     }
 }

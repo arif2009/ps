@@ -11,4 +11,11 @@ namespace PS.Utility
         Owner,
         Customer
     }
+
+    public enum PetTypes
+    {
+        Cat,
+        Dog,
+        Bird
+    }
 }

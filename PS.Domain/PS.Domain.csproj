@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C9B24A55-513F-4592-ACFB-71DC53A19B62}</ProjectGuid>
+    <ProjectGuid>{C08FF063-012E-465D-A114-5F96E5A783A4}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>PS.Manager</RootNamespace>
-    <AssemblyName>PS.Manager</AssemblyName>
+    <RootNamespace>PS.Domain</RootNamespace>
+    <AssemblyName>PS.Domain</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -41,15 +41,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="IUserManager.cs" />
+    <Compile Include="IUserRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserManager.cs" />
+    <Compile Include="UserRepository.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\PS.Domain\PS.Domain.csproj">
-      <Project>{C08FF063-012E-465D-A114-5F96E5A783A4}</Project>
-      <Name>PS.Domain</Name>
-    </ProjectReference>
     <ProjectReference Include="..\PS.Model\PS.Model.csproj">
       <Project>{F45EDD5A-833E-45E6-8857-9149562AA66C}</Project>
       <Name>PS.Model</Name>
