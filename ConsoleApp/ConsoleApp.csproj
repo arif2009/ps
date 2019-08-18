@@ -54,6 +54,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\PS.Domain\PS.Domain.csproj">
+      <Project>{C08FF063-012E-465D-A114-5F96E5A783A4}</Project>
+      <Name>PS.Domain</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PS.Manager\PS.Manager.csproj">
       <Project>{C9B24A55-513F-4592-ACFB-71DC53A19B62}</Project>
       <Name>PS.Manager</Name>

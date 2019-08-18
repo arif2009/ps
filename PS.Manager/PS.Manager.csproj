@@ -54,6 +54,10 @@
       <Project>{F45EDD5A-833E-45E6-8857-9149562AA66C}</Project>
       <Name>PS.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PS.Utility\PS.Utility.csproj">
+      <Project>{9ECEA8C1-3DC0-4D71-A01A-7AE6333ED1C3}</Project>
+      <Name>PS.Utility</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

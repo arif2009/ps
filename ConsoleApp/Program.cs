@@ -1,4 +1,6 @@
-﻿using PS.Manager;
+﻿using Autofac;
+using PS.Domain;
+using PS.Manager;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +11,26 @@ namespace ConsoleApp
 {
     class Program
     {
-        private static UserManager userManager = new UserManager();
+        private static IContainer Container { get; set; }
         static void Main(string[] args)
         {
+            var container = ConfigureContainer();
+            var userManager = container.Resolve<IUserManager>();
+
             var allUser = userManager.GetAllUsers();
+
             Console.ReadKey();
+        }
+
+        private static IContainer ConfigureContainer()
+        {
+            var builder = new ContainerBuilder();
+
+            builder.RegisterType<UserManager>().As<IUserManager>();
+            builder.RegisterType<UserRepository>().As<IUserRepository>();
+            // Register all dependencies (and dependencies of those dependencies, etc)
+
+            return builder.Build();
         }
     }
 }

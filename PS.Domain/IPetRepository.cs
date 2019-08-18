@@ -7,9 +7,8 @@ using System.Threading.Tasks;
 
 namespace PS.Domain
 {
-    public interface IUserRepository
+    public interface IPetRepository
     {
-        List<User> GetAllUsers();
-        List<User> GetAllCustomer();
+        List<Pet> GetAllPets();
     }
 }

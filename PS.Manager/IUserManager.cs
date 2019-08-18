@@ -10,5 +10,8 @@ namespace PS.Manager
     public interface IUserManager
     {
         List<User> GetAllUsers();
+        List<User> GetAllCustomer();
+        User GetOwner();
+        User GetCustomerById(long id);
     }
 }
