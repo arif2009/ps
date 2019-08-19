@@ -11,7 +11,6 @@ namespace PS.Model
         public DateTime InplanteDate { get; set; }
         public long Price { get; set; }
         public string Description { get; set; }
-        public bool IsSold { get; set; }
         public PetTypes PetType { get; set; }
     }
 }

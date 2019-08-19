@@ -66,6 +66,10 @@
       <Project>{f45edd5a-833e-45e6-8857-9149562aa66c}</Project>
       <Name>PS.Model</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PS.Service\PS.Service.csproj">
+      <Project>{10966c3e-e2b2-4686-8b5b-b424823d5bd0}</Project>
+      <Name>PS.Service</Name>
+    </ProjectReference>
     <ProjectReference Include="..\PS.Utility\PS.Utility.csproj">
       <Project>{9ecea8c1-3dc0-4d71-a01a-7ae6333ed1c3}</Project>
       <Name>PS.Utility</Name>

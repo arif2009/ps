@@ -18,4 +18,10 @@ namespace PS.Utility
         Dog,
         Bird
     }
+
+    public enum TransTypes
+    {
+        ByCash,
+        ByInsurance
+    }
 }
