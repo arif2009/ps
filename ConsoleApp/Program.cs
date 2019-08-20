@@ -11,10 +11,10 @@ namespace ConsoleApp
 {
     class Program
     {
-        private static IContainer Container { get; set; }
+        private static IContainer container { get; set; }
         static void Main(string[] args)
         {
-            var container = ConfigureContainer();
+            container = ConfigureContainer();
             var userManager = container.Resolve<IUserManager>();
 
             var allUser = userManager.GetAllUsers();
