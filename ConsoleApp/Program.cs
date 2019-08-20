@@ -28,6 +28,7 @@ namespace ConsoleApp
 
             builder.RegisterType<UserManager>().As<IUserManager>();
             builder.RegisterType<UserRepository>().As<IUserRepository>();
+            builder.RegisterType<TransManager>().As<ITransManager>();
             // Register all dependencies (and dependencies of those dependencies, etc)
 
             return builder.Build();

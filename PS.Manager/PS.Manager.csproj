@@ -42,9 +42,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IPetManager.cs" />
+    <Compile Include="ITransManager.cs" />
     <Compile Include="IUserManager.cs" />
     <Compile Include="PetManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TransManager.cs" />
     <Compile Include="UserManager.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -36,12 +36,12 @@ namespace PS.Manager
 
         public List<Pet> GetSoldPets()
         {
-            return _petRepository.GetAllPets().FindAll(x => x.IsSold);
+            return _petRepository.GetAllPets();
         }
 
         public List<Pet> GetUnSoldablePets()
         {
-            return _petRepository.GetAllPets().FindAll(x => !x.IsSold);
+            return _petRepository.GetAllPets();
         }
     }
 }
