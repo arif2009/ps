@@ -8,10 +8,12 @@ namespace PS.Manager
     public class PetManager : IPetManager
     {
         private IPetRepository _petRepository;
+        private ITransManager _transManager;
 
-        public PetManager(IPetRepository petRepository)
+        public PetManager(IPetRepository petRepository, ITransManager transManager)
         {
             _petRepository = petRepository;
+            _transManager = transManager;
         }
 
         public List<Pet> GetAllPets()
