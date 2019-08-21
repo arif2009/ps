@@ -15,9 +15,9 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             container = ConfigureContainer();
-            var userManager = container.Resolve<IUserManager>();
+            var userManager = container.Resolve<IPetManager>();
 
-            var allUser = userManager.GetAllUsers();
+            var allUser = userManager.GetUnSoldablePets();
 
             Console.ReadKey();
         }
@@ -26,8 +26,12 @@ namespace ConsoleApp
         {
             var builder = new ContainerBuilder();
 
-            builder.RegisterType<UserManager>().As<IUserManager>();
             builder.RegisterType<UserRepository>().As<IUserRepository>();
+            builder.RegisterType<PetRepository>().As<IPetRepository>();
+            builder.RegisterType<TransRepository>().As<ITransRepository>();
+
+            builder.RegisterType<UserManager>().As<IUserManager>();
+            builder.RegisterType<PetManager>().As<IPetManager>();
             builder.RegisterType<TransManager>().As<ITransManager>();
             // Register all dependencies (and dependencies of those dependencies, etc)
 

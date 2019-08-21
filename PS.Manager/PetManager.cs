@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using System.Linq;
 using PS.Domain;
 using PS.Model;
 using PS.Utility;
@@ -8,12 +9,12 @@ namespace PS.Manager
     public class PetManager : IPetManager
     {
         private IPetRepository _petRepository;
-        private ITransManager _transManager;
+        private ITransRepository _transRepository;
 
-        public PetManager(IPetRepository petRepository, ITransManager transManager)
+        public PetManager(IPetRepository petRepository, ITransRepository transRepository)
         {
             _petRepository = petRepository;
-            _transManager = transManager;
+            _transRepository = transRepository;
         }
 
         public List<Pet> GetAllPets()
@@ -38,7 +39,7 @@ namespace PS.Manager
 
         public List<Pet> GetSoldPets()
         {
-            return _petRepository.GetAllPets();
+            return _petRepository.GetAllPets().Join(_transRepository.GetAllTransaction(), p => p.Id, t => t.PetId, (p, t) => p).ToList();
         }
 
         public List<Pet> GetUnSoldablePets()
