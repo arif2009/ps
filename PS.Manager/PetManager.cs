@@ -44,7 +44,8 @@ namespace PS.Manager
 
         public List<Pet> GetUnSoldablePets()
         {
-            return _petRepository.GetAllPets();
+            var match = this.GetSoldPets().Select(y => new { y.Id });
+            return _petRepository.GetAllPets().Where(x => !match.Contains(new { x.Id })).ToList();
         }
     }
 }
