@@ -50,6 +50,8 @@
     <Compile Include="Store.cs" />
     <Compile Include="Transaction.cs" />
     <Compile Include="User.cs" />
+    <Compile Include="VMs\PetVm.cs" />
+    <Compile Include="VMs\ReportVm.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\PS.Utility\PS.Utility.csproj">

@@ -2,6 +2,7 @@
 using System.Linq;
 using PS.Domain;
 using PS.Model;
+using PS.Model.VMs;
 using PS.Utility;
 
 namespace PS.Manager
@@ -17,35 +18,29 @@ namespace PS.Manager
             _transRepository = transRepository;
         }
 
-        public List<Pet> GetAllPets()
+        public IEnumerable<Pet> GetAllPets()
         {
             return _petRepository.GetAllPets();
         }
 
-        public List<Pet> GetBirds()
+        public IEnumerable<PetVm> GetSoldPets()
         {
-            return this.GetUnSoldablePets().FindAll(x=>x.PetType == PetTypes.Bird);
+            var pets = _petRepository.GetAllPets().Join(_transRepository.GetAllTransaction(), p => p.Id, t => t.PetId,
+                (p, t) => new PetVm
+                {
+                    Id = p.Id, DateOfBirth = p.DateOfBirth,
+                    InplanteDate = p.InplanteDate, SoldDate = t.CrietedDate,
+                    Price = p.Price,
+                    PetType = p.PetType, TransType = t.TransType
+                }).ToList();
+
+            return pets;
         }
 
-        public List<Pet> GetCats()
-        {
-            return this.GetUnSoldablePets().FindAll(x => x.PetType == PetTypes.Cat);
-        }
-
-        public List<Pet> GetDogs()
-        {
-            return this.GetUnSoldablePets().FindAll(x => x.PetType == PetTypes.Dog);
-        }
-
-        public List<Pet> GetSoldPets()
-        {
-            return _petRepository.GetAllPets().Join(_transRepository.GetAllTransaction(), p => p.Id, t => t.PetId, (p, t) => p).ToList();
-        }
-
-        public List<Pet> GetUnSoldablePets()
+        public IEnumerable<Pet> GetUnSoldablePets()
         {
             var match = this.GetSoldPets().Select(y => new { y.Id });
-            return _petRepository.GetAllPets().Where(x => !match.Contains(new { x.Id })).ToList();
+            return _petRepository.GetAllPets().Where(x => !match.Contains(new { x.Id }));
         }
     }
 }

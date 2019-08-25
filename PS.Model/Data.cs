@@ -53,21 +53,21 @@ namespace PS.Model
 
         public static List<Transaction> transactions = new List<Transaction>
         {
-            new Transaction{ Id = 1, PetId = 16, UserId = 4, CrietedDate = new DateTime(2019,08,21), TransType = TransTypes.ByCash  },
+            new Transaction{ Id = 1, PetId = 16, UserId = 4, CrietedDate = new DateTime(2019,08,21), TransType = TransTypes.ByInsurance  },
             new Transaction{ Id = 2, PetId = 6, UserId = 3, CrietedDate = new DateTime(2019,08,26), TransType = TransTypes.ByCash  },
-            new Transaction{ Id = 3, PetId = 12, UserId = 2, CrietedDate = new DateTime(2019,08,21), TransType =  TransTypes.ByInsurance },
-            new Transaction{ Id = 4, PetId = 11, UserId = 5, CrietedDate = new DateTime(2019,08,16), TransType =  TransTypes.ByInsurance },
-            new Transaction{ Id = 5, PetId = 17, UserId = 2, CrietedDate = new DateTime(2019,08,29), TransType = TransTypes.ByCash  },
+            new Transaction{ Id = 3, PetId = 12, UserId = 2, CrietedDate = new DateTime(2019,08,21), TransType =  TransTypes.ByCash },
+            new Transaction{ Id = 4, PetId = 11, UserId = 5, CrietedDate = new DateTime(2019,08,16), TransType =  TransTypes.ByUpfront },
+            new Transaction{ Id = 5, PetId = 17, UserId = 2, CrietedDate = new DateTime(2019,08,29), TransType = TransTypes.ByInsurance  },
             new Transaction{ Id = 6, PetId = 29, UserId = 2, CrietedDate = new DateTime(2019,08,25), TransType = TransTypes.ByCash  },
             new Transaction{ Id = 7, PetId = 25, UserId = 3, CrietedDate = new DateTime(2019,08,23), TransType =  TransTypes.ByInsurance },
-            new Transaction{ Id = 8, PetId = 24, UserId = 2, CrietedDate = new DateTime(2019,08,19), TransType = TransTypes.ByCash  },
-            new Transaction{ Id = 9, PetId = 23, UserId = 4, CrietedDate = new DateTime(2019,08,22), TransType =  TransTypes.ByInsurance },
+            new Transaction{ Id = 8, PetId = 24, UserId = 2, CrietedDate = new DateTime(2019,08,19), TransType = TransTypes.ByUpfront  },
+            new Transaction{ Id = 9, PetId = 23, UserId = 4, CrietedDate = new DateTime(2019,08,22), TransType =  TransTypes.ByUpfront },
             new Transaction{ Id = 10, PetId = 10, UserId = 3, CrietedDate = new DateTime(2019,08,18), TransType =  TransTypes.ByInsurance },
             new Transaction{ Id = 11, PetId = 11, UserId = 5, CrietedDate = new DateTime(2019,08,15), TransType = TransTypes.ByCash  },
             new Transaction{ Id = 12, PetId = 7, UserId = 5, CrietedDate = new DateTime(2019,08,15), TransType =  TransTypes.ByInsurance },
             new Transaction{ Id = 13, PetId = 8, UserId = 3, CrietedDate = new DateTime(2019,08,17), TransType = TransTypes.ByCash  },
             new Transaction{ Id = 14, PetId = 28, UserId = 5, CrietedDate = new DateTime(2019,08,29), TransType =  TransTypes.ByInsurance },
-            new Transaction{ Id = 15, PetId = 13, UserId = 2, CrietedDate = new DateTime(2019,08,29), TransType =  TransTypes.ByInsurance }
+            new Transaction{ Id = 15, PetId = 13, UserId = 2, CrietedDate = new DateTime(2019,08,29), TransType =  TransTypes.ByCash }
         };
 
     }

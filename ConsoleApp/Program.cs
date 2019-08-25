@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PS.Service;
 
 namespace ConsoleApp
 {
@@ -15,9 +16,9 @@ namespace ConsoleApp
         static void Main(string[] args)
         {
             container = ConfigureContainer();
-            var userManager = container.Resolve<IPetManager>();
+            var revinueService = container.Resolve<IRevenueService>();
 
-            var allUser = userManager.GetUnSoldablePets();
+            var allUser = revinueService.GetRevinueBetween(DateTime.Now, DateTime.Now.AddDays(5));
 
             Console.ReadKey();
         }
@@ -33,6 +34,8 @@ namespace ConsoleApp
             builder.RegisterType<UserManager>().As<IUserManager>();
             builder.RegisterType<PetManager>().As<IPetManager>();
             builder.RegisterType<TransManager>().As<ITransManager>();
+
+            builder.RegisterType<RevenueService>().As<IRevenueService>();
             // Register all dependencies (and dependencies of those dependencies, etc)
 
             return builder.Build();

@@ -3,20 +3,21 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PS.Domain;
 using PS.Model;
 
 namespace PS.Manager
 {
     public class TransManager : ITransManager
     {
-        private ITransManager _transManager;
-        public TransManager(ITransManager transManager)
+        private ITransRepository _transRepository;
+        public TransManager(ITransRepository transRepository)
         {
-            _transManager = transManager;
+            _transRepository = transRepository;
         }
         public List<Transaction> GetAllTransaction()
         {
-            return _transManager.GetAllTransaction();
+            return _transRepository.GetAllTransaction();
         }
     }
 }

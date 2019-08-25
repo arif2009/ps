@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace PS.Utility
+﻿namespace PS.Utility
 {
     public enum Roles
     {
@@ -22,6 +16,7 @@ namespace PS.Utility
     public enum TransTypes
     {
         ByCash,
-        ByInsurance
+        ByInsurance,
+        ByUpfront
     }
 }
