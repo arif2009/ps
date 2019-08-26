@@ -48,26 +48,41 @@ namespace PS.Model
             new Pet{ Id = 27, Name = "Camilla", PetType = PetTypes.Bird, DateOfBirth = new DateTime(2017,09,21), ChipIdentifier = "PGG99APB8WH", InplanteDate = new DateTime(2018,01,23), Price = 3558, Description = "lacus. Etiam bibendum fermentum metus. Aenean sed pede nec ante blandit viverra. Donec tempus, lorem", CrietedDate = new DateTime(2019,04,25) },
             new Pet{ Id = 28, Name = "Pamela", PetType = PetTypes.Bird, DateOfBirth = new DateTime(2018,05,25), ChipIdentifier = "KWQ12ALB0FC", InplanteDate = new DateTime(2018,02,14), Price = 3425, Description = "elit sed consequat auctor, nunc nulla vulputate dui, nec tempus mauris erat eget ipsum. Suspendisse", CrietedDate = new DateTime(2019,09,23) },
             new Pet{ Id = 29, Name = "Vladimir", PetType = PetTypes.Bird, DateOfBirth = new DateTime(2019,02,13), ChipIdentifier = "ZQA23GVD1BI", InplanteDate = new DateTime(2019,03,25), Price = 1733, Description = "placerat, augue. Sed molestie. Sed id risus quis diam luctus lobortis. Class aptent taciti sociosqu", CrietedDate = new DateTime(2019,10,01) },
-            new Pet{ Id = 30, Name = "Alexis", PetType = PetTypes.Bird, DateOfBirth = new DateTime(2019,03,06), ChipIdentifier = "ZCJ45OCL9KJ", InplanteDate = new DateTime(2019,07,15), Price = 3577, Description = "eget, ipsum. Donec sollicitudin adipiscing ligula. Aenean gravida nunc sed pede. Cum sociis natoque penatibus", CrietedDate = new DateTime(2019,02,28) }
+            new Pet{ Id = 30, Name = "Alexis", PetType = PetTypes.Bird, DateOfBirth = new DateTime(2019,03,06), ChipIdentifier = "ZCJ45OCL9KJ", InplanteDate = new DateTime(2019,07,15), Price = 3577, Description = "eget, ipsum. Donec sollicitudin adipiscing ligula. Aenean gravida nunc sed pede. Cum sociis natoque penatibus", CrietedDate = new DateTime(2019,02,28) },
+            new Pet{ Id = 31, Name = "Carla", PetType = PetTypes.Bird, DateOfBirth = new DateTime(2018,09,06), ChipIdentifier = "BAU62HIJ8SH", InplanteDate = new DateTime(2018,06,24), Price = 4785, Description = "Aliquam nec enim. Nunc ut erat. Sed nunc est, mollis non, cursus non, egestas a,", CrietedDate = new DateTime(2019,10,08) },
+            new Pet{ Id = 32, Name = "Buckminster", PetType = PetTypes.Bird, DateOfBirth = new DateTime(2017,10,25), ChipIdentifier = "XBO36MNS2HY", InplanteDate = new DateTime(2018,09,04), Price = 4725, Description = "erat nonummy ultricies ornare, elit elit fermentum risus, at fringilla purus mauris a nunc. In", CrietedDate = new DateTime(2019,12,17) },
+            new Pet{ Id = 33, Name = "Alea", PetType = PetTypes.Bird, DateOfBirth = new DateTime(2018,08,03), ChipIdentifier = "QJW88HJG8PA", InplanteDate = new DateTime(2018,08,05), Price = 3528, Description = "mi fringilla mi lacinia mattis. Integer eu lacus. Quisque imperdiet, erat nonummy ultricies ornare, elit", CrietedDate = new DateTime(2019,08,14) },
+            new Pet{ Id = 34, Name = "Alice", PetType = PetTypes.Bird, DateOfBirth = new DateTime(2017,12,14), ChipIdentifier = "IVW40AOH2LM", InplanteDate = new DateTime(2019,08,06), Price = 1331, Description = "Sed eget lacus. Mauris non dui nec urna suscipit nonummy. Fusce fermentum fermentum arcu. Vestibulum", CrietedDate = new DateTime(2019,01,31) },
+            new Pet{ Id = 35, Name = "Clarke", PetType = PetTypes.Bird, DateOfBirth = new DateTime(2018,05,20), ChipIdentifier = "CDT40TXA8CZ", InplanteDate = new DateTime(2019,05,27), Price = 1162, Description = "molestie arcu. Sed eu nibh vulputate mauris sagittis placerat. Cras dictum ultricies ligula. Nullam enim.", CrietedDate = new DateTime(2020,03,10) }
         };
 
         public static List<Transaction> transactions = new List<Transaction>
         {
-            new Transaction{ Id = 1, PetId = 16, UserId = 4, CrietedDate = new DateTime(2019,08,21), TransType = TransTypes.ByInsurance  },
-            new Transaction{ Id = 2, PetId = 6, UserId = 3, CrietedDate = new DateTime(2019,08,26), TransType = TransTypes.ByCash  },
-            new Transaction{ Id = 3, PetId = 12, UserId = 2, CrietedDate = new DateTime(2019,08,21), TransType =  TransTypes.ByCash },
-            new Transaction{ Id = 4, PetId = 11, UserId = 5, CrietedDate = new DateTime(2019,08,16), TransType =  TransTypes.ByUpfront },
-            new Transaction{ Id = 5, PetId = 17, UserId = 2, CrietedDate = new DateTime(2019,08,29), TransType = TransTypes.ByInsurance  },
-            new Transaction{ Id = 6, PetId = 29, UserId = 2, CrietedDate = new DateTime(2019,08,25), TransType = TransTypes.ByCash  },
-            new Transaction{ Id = 7, PetId = 25, UserId = 3, CrietedDate = new DateTime(2019,08,23), TransType =  TransTypes.ByInsurance },
-            new Transaction{ Id = 8, PetId = 24, UserId = 2, CrietedDate = new DateTime(2019,08,19), TransType = TransTypes.ByUpfront  },
-            new Transaction{ Id = 9, PetId = 23, UserId = 4, CrietedDate = new DateTime(2019,08,22), TransType =  TransTypes.ByUpfront },
-            new Transaction{ Id = 10, PetId = 10, UserId = 3, CrietedDate = new DateTime(2019,08,18), TransType =  TransTypes.ByInsurance },
-            new Transaction{ Id = 11, PetId = 11, UserId = 5, CrietedDate = new DateTime(2019,08,15), TransType = TransTypes.ByCash  },
-            new Transaction{ Id = 12, PetId = 7, UserId = 5, CrietedDate = new DateTime(2019,08,15), TransType =  TransTypes.ByInsurance },
-            new Transaction{ Id = 13, PetId = 8, UserId = 3, CrietedDate = new DateTime(2019,08,17), TransType = TransTypes.ByCash  },
-            new Transaction{ Id = 14, PetId = 28, UserId = 5, CrietedDate = new DateTime(2019,08,29), TransType =  TransTypes.ByInsurance },
-            new Transaction{ Id = 15, PetId = 13, UserId = 2, CrietedDate = new DateTime(2019,08,29), TransType =  TransTypes.ByCash }
+            new Transaction { Id = 1, PetId = 34, UserId = 5, CrietedDate = new DateTime(2019,08,24), TransType = TransTypes.ByUpfront },
+            new Transaction { Id = 2, PetId = 4, UserId = 4, CrietedDate = new DateTime(2019,08,14), TransType = TransTypes.ByCash },
+            new Transaction { Id = 3, PetId = 2, UserId = 4, CrietedDate = new DateTime(2019,08,15), TransType = TransTypes.ByUpfront },
+            new Transaction { Id = 4, PetId = 12, UserId = 5, CrietedDate = new DateTime(2019,08,01), TransType = TransTypes.ByCash },
+            new Transaction { Id = 5, PetId = 22, UserId = 5, CrietedDate = new DateTime(2019,08,26), TransType = TransTypes.ByInsurance },
+            new Transaction { Id = 6, PetId = 6, UserId = 2, CrietedDate = new DateTime(2019,08,01), TransType = TransTypes.ByCash },
+            new Transaction { Id = 7, PetId = 16, UserId = 3, CrietedDate = new DateTime(2019,08,17), TransType = TransTypes.ByCash },
+            new Transaction { Id = 8, PetId = 1, UserId = 5, CrietedDate = new DateTime(2019,08,22), TransType = TransTypes.ByUpfront },
+            new Transaction { Id = 9, PetId = 25, UserId = 3, CrietedDate = new DateTime(2019,08,30), TransType = TransTypes.ByUpfront },
+            new Transaction { Id = 10, PetId = 10, UserId = 5, CrietedDate = new DateTime(2019,08,22), TransType = TransTypes.ByCash },
+            new Transaction { Id = 11, PetId = 17, UserId = 4, CrietedDate = new DateTime(2019,08,24), TransType = TransTypes.ByInsurance },
+            new Transaction { Id = 12, PetId = 31, UserId = 2, CrietedDate = new DateTime(2019,08,22), TransType = TransTypes.ByInsurance },
+            new Transaction { Id = 13, PetId = 28, UserId = 3, CrietedDate = new DateTime(2019,08,10), TransType = TransTypes.ByUpfront },
+            new Transaction { Id = 14, PetId = 20, UserId = 2, CrietedDate = new DateTime(2019,07,31), TransType = TransTypes.ByCash },
+            new Transaction { Id = 15, PetId = 25, UserId = 3, CrietedDate = new DateTime(2019,08,24), TransType = TransTypes.ByInsurance },
+            new Transaction { Id = 16, PetId = 33, UserId = 3, CrietedDate = new DateTime(2019,08,15), TransType = TransTypes.ByInsurance },
+            new Transaction { Id = 17, PetId = 24, UserId = 4, CrietedDate = new DateTime(2019,07,31), TransType = TransTypes.ByInsurance },
+            new Transaction { Id = 18, PetId = 35, UserId = 4, CrietedDate = new DateTime(2019,08,30), TransType = TransTypes.ByUpfront },
+            new Transaction { Id = 19, PetId = 10, UserId = 4, CrietedDate = new DateTime(2019,08,08), TransType = TransTypes.ByUpfront },
+            new Transaction { Id = 20, PetId = 30, UserId = 4, CrietedDate = new DateTime(2019,08,01), TransType = TransTypes.ByCash },
+            new Transaction { Id = 21, PetId = 20, UserId = 2, CrietedDate = new DateTime(2019,08,29), TransType = TransTypes.ByInsurance },
+            new Transaction { Id = 22, PetId = 23, UserId = 3, CrietedDate = new DateTime(2019,08,13), TransType = TransTypes.ByCash },
+            new Transaction { Id = 23, PetId = 21, UserId = 5, CrietedDate = new DateTime(2019,08,15), TransType = TransTypes.ByInsurance },
+            new Transaction { Id = 24, PetId = 29, UserId = 5, CrietedDate = new DateTime(2019,08,01), TransType = TransTypes.ByUpfront },
+            new Transaction { Id = 25, PetId = 32, UserId = 5, CrietedDate = new DateTime(2019,08,08), TransType = TransTypes.ByInsurance }
         };
 
     }

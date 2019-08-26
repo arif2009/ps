@@ -26,6 +26,7 @@ namespace ConsoleApp
 
             var endDate = DateTime.Now;
             var startDate = DateTime.Now.AddDays(-30);
+            startDate = startDate.Date.DayOfWeek == DayOfWeek.Sunday? startDate.AddDays(1): startDate;
 
             IEnumerable<DateTime> daysInMonth = MethodExtensions.EachDay(startDate, endDate);
 
