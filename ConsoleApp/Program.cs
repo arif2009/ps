@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using PS.Service;
 using System.Globalization;
+using PS.Utility;
 
 namespace ConsoleApp
 {
@@ -23,28 +24,23 @@ namespace ConsoleApp
             DateTime reference = DateTime.Now;
             Calendar calendar = CultureInfo.CurrentCulture.Calendar;
 
-            IEnumerable<int> daysInMonth = Enumerable.Range(1, DateTime.Now.Day);
+            var endDate = DateTime.Now;
+            var startDate = DateTime.Now.AddDays(-30);
 
-            var a = daysInMonth.Select(day => new DateTime(reference.Year, reference.Month, day));
-            var b = a.GroupBy(d => calendar.GetWeekOfYear(d, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday));
-            //var hd = b.Where(x => x.DayOfWeek == DayOfWeek.Sunday);
-            //var c = b.Except();
-            /*List<Tuple<DateTime, DateTime>> weeks = daysInMonth.Select(day => new DateTime(reference.Year, reference.Month, day))
-                .GroupBy(d => calendar.GetWeekOfYear(d, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday))
-                .Select(g => new Tuple<DateTime, DateTime>(g.First(), g.Last()))
-                .ToList();*/
+            IEnumerable<DateTime> daysInMonth = MethodExtensions.EachDay(startDate, endDate);
 
-            var weeks = daysInMonth.Select(day => new DateTime(reference.Year, reference.Month, day))
-                .GroupBy(d => calendar.GetWeekOfYear(d, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday))
-                .Select(g => new
-                {
-                    g.First()
-                })
+            List<Tuple<DateTime, DateTime>> weeks = daysInMonth.GroupBy(d => calendar.GetWeekOfYear(d, CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday))
+                .Select(g => new Tuple<DateTime, DateTime>(g.First(), (g.Last().DayOfWeek == DayOfWeek.Sunday) ? g.Last().AddDays(-1) : g.Last()))
                 .ToList();
 
-            //weeks.ForEach(x => Console.WriteLine("{0:MM/dd/yyyy} - {1:MM/dd/yyyy}", x.Item1, x.Item2));
+            Console.WriteLine("Weekly revenue report with immobilized money from {0:MM/dd/yyyy} to {1:MM/dd/yyyy}\n", startDate, endDate);
 
-            //var allUser = revinueService.GetRevinueBetween(DateTime.Now, DateTime.Now.AddDays(5));
+            weeks.ForEach(x =>
+            {
+                Console.WriteLine("From {0:MM/dd/yyyy} to {1:MM/dd/yyyy}", x.Item1, x.Item2);
+                var rev = revinueService.GetRevinueBetween(x.Item1, x.Item2);
+                Console.WriteLine($"Revinue => {rev.Revenue} Immobilized money => {rev.Immobilized}\n");
+            });
 
             Console.ReadKey();
         }
