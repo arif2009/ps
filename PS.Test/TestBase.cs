@@ -40,6 +40,30 @@ namespace PS.Test
             }
         }
 
+        protected IUserRepository UserRepository
+        {
+            get
+            {
+                return AutofacContainer.Resolve<IUserRepository>();
+            } 
+        }
+
+        protected IPetRepository PetRepository
+        {
+            get
+            {
+                return AutofacContainer.Resolve<IPetRepository>();
+            }
+        }
+
+        protected ITransRepository TransRepository
+        {
+            get
+            {
+                return AutofacContainer.Resolve<ITransRepository>();
+            }
+        }
+
         protected IPetManager PetManager
         {
             get
@@ -47,5 +71,6 @@ namespace PS.Test
                 return AutofacContainer.Resolve<IPetManager>();
             }
         }
+
     }
 }
