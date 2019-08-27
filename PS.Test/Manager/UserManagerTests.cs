@@ -3,6 +3,7 @@ using PS.Model;
 using PS.Utility;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace PS.Test.Manager
 {
@@ -32,7 +33,10 @@ namespace PS.Test.Manager
         [Test]
         public void ShouldOwner()
         {
+            var sut = UserManager.GetOwner();
+            var owner = Data.userList.FirstOrDefault(x => x.Role == Roles.Owner);
 
+            Assert.AreEqual(sut, owner);
         }
     }
 }

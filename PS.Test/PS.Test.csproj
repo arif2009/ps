@@ -60,7 +60,6 @@
     <Compile Include="Manager\PetManagerTests.cs" />
     <Compile Include="Manager\UserManagerTests.cs" />
     <Compile Include="TestBase.cs" />
-    <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
