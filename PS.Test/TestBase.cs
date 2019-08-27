@@ -40,27 +40,11 @@ namespace PS.Test
             }
         }
 
-        protected IUserRepository UserRepository
+        protected IUserManager UserManager
         {
             get
             {
-                return AutofacContainer.Resolve<IUserRepository>();
-            } 
-        }
-
-        protected IPetRepository PetRepository
-        {
-            get
-            {
-                return AutofacContainer.Resolve<IPetRepository>();
-            }
-        }
-
-        protected ITransRepository TransRepository
-        {
-            get
-            {
-                return AutofacContainer.Resolve<ITransRepository>();
+                return AutofacContainer.Resolve<IUserManager>();
             }
         }
 
