@@ -9,7 +9,7 @@ namespace PS.Domain
     {
         public List<User> GetAllUsers()
         {
-            return Data.customerList;
+            return Data.userList;
         }
     }
 }
