@@ -7,19 +7,9 @@ namespace PS.Domain
 {
     public class UserRepository : IUserRepository
     {
-        public List<User> GetAllCustomer()
-        {
-            return Data.customerList;
-        }
-
         public List<User> GetAllUsers()
         {
-            var userList = new List<User>();
-
-            userList.Add(Data.owner);
-            userList.AddRange(Data.customerList);
-
-            return userList;
+            return Data.customerList;
         }
     }
 }

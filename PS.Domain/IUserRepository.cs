@@ -10,6 +10,5 @@ namespace PS.Domain
     public interface IUserRepository
     {
         List<User> GetAllUsers();
-        List<User> GetAllCustomer();
     }
 }

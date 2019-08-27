@@ -19,7 +19,7 @@ namespace PS.Manager
 
         public List<User> GetAllCustomer()
         {
-            return _userRepository.GetAllCustomer();
+            return this.GetAllUsers().FindAll(x => x.Role == Roles.Customer);
         }
 
         public List<User> GetAllUsers()
@@ -29,7 +29,7 @@ namespace PS.Manager
 
         public User GetCustomerById(long id)
         {
-            return _userRepository.GetAllCustomer().FirstOrDefault(x=>x.Id == id);
+            return this.GetAllCustomer().FirstOrDefault(x=>x.Id == id);
         }
 
         public User GetOwner()

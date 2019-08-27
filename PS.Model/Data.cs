@@ -6,13 +6,13 @@ namespace PS.Model
 {
     public class Data
     {
-        public static User owner = new User { Id = 1, Name = "Barrett Klein", Role = Roles.Owner, ContactNo = "042-714-9748", Address = "P.O. Box 198, 543 Nisi. Rd.", SSN = "B7556371-422C-F852-D1C5-938203EB2063", CrietedDate = new DateTime(2019, 08, 21) };
         public static List<User> customerList = new List<User>
         {
-            new User { Id = 2, Name = "Jesse Richardson", ContactNo = "071-851-1175", Address = "Ap #385-8107 Magna. St.", SSN = "31CEF7B2-3061-F3EC-D95D-05357736DC58", CrietedDate = new DateTime(2018,08,30) },
-            new User { Id = 3, Name = "Kennan Sparks", ContactNo = "077-066-6786", Address = "Ap #912-2912 Nulla Road", SSN = "47511F9A-1E0B-54B0-73BC-9C961F326B75", CrietedDate = new DateTime(2019,04,24) },
-            new User { Id = 4, Name = "Zachery Cote", ContactNo = "047-232-9622", Address = "2757 Lectus Av.", SSN = "82816999-9C2E-B8ED-878D-7FE706F966C8", CrietedDate = new DateTime(2019,01,09) },
-            new User { Id = 5, Name = "Elvis Knox", ContactNo = "099-880-8303", Address = "P.O. Box 721, 9480 Massa Avenue", SSN = "69105ABA-3E47-550B-2204-A662FF994E1B", CrietedDate = new DateTime(2019,01,25) }
+            new User { Id = 1, Name = "Barrett Klein", Role = Roles.Owner, ContactNo = "042-714-9748", Address = "P.O. Box 198, 543 Nisi. Rd.", SSN = "B7556371-422C-F852-D1C5-938203EB2063", CrietedDate = new DateTime(2019, 08, 21) },
+            new User { Id = 2, Name = "Jesse Richardson", Role = Roles.Customer, ContactNo = "071-851-1175", Address = "Ap #385-8107 Magna. St.", SSN = "31CEF7B2-3061-F3EC-D95D-05357736DC58", CrietedDate = new DateTime(2018,08,30) },
+            new User { Id = 3, Name = "Kennan Sparks", Role = Roles.Customer, ContactNo = "077-066-6786", Address = "Ap #912-2912 Nulla Road", SSN = "47511F9A-1E0B-54B0-73BC-9C961F326B75", CrietedDate = new DateTime(2019,04,24) },
+            new User { Id = 4, Name = "Zachery Cote", Role = Roles.Customer, ContactNo = "047-232-9622", Address = "2757 Lectus Av.", SSN = "82816999-9C2E-B8ED-878D-7FE706F966C8", CrietedDate = new DateTime(2019,01,09) },
+            new User { Id = 5, Name = "Elvis Knox", Role = Roles.Customer, ContactNo = "099-880-8303", Address = "P.O. Box 721, 9480 Massa Avenue", SSN = "69105ABA-3E47-550B-2204-A662FF994E1B", CrietedDate = new DateTime(2019,01,25) }
         };
 
         public static List<Pet> pets = new List<Pet>
