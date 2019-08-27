@@ -52,6 +52,8 @@
     <Reference Include="System.Core" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Manager\PetManagerTests.cs" />
+    <Compile Include="TestBase.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -63,7 +65,24 @@
       <Project>{d296b760-c3d3-47da-9b68-70b262fb4aa6}</Project>
       <Name>ConsoleApp</Name>
     </ProjectReference>
+    <ProjectReference Include="..\PS.Domain\PS.Domain.csproj">
+      <Project>{C08FF063-012E-465D-A114-5F96E5A783A4}</Project>
+      <Name>PS.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PS.Manager\PS.Manager.csproj">
+      <Project>{c9b24a55-513f-4592-acfb-71dc53a19b62}</Project>
+      <Name>PS.Manager</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PS.Model\PS.Model.csproj">
+      <Project>{F45EDD5A-833E-45E6-8857-9149562AA66C}</Project>
+      <Name>PS.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\PS.Service\PS.Service.csproj">
+      <Project>{10966c3e-e2b2-4686-8b5b-b424823d5bd0}</Project>
+      <Name>PS.Service</Name>
+    </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
