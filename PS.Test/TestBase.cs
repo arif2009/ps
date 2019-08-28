@@ -56,5 +56,13 @@ namespace PS.Test
             }
         }
 
+        protected IRevenueService RevenueService
+        {
+            get
+            {
+                return AutofacContainer.Resolve<IRevenueService>();
+            }
+        }
+
     }
 }
