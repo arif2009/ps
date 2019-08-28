@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using NUnit.Framework;
 using PS.Model;
+using PS.Model.VMs;
 using PS.Utility;
 
 namespace PS.Test.Service
@@ -30,9 +28,12 @@ namespace PS.Test.Service
         }
 
         [Test]
-        public void RevinueShouldNotNull()
+        public void RevinueShouldHaveObject()
         {
+            var sut = RevenueService.GetRevinueBetween(new DateTime(2019, 08, 14), new DateTime(2019, 08, 24));
 
+            Assert.That(sut, Is.Not.Null);
+            Assert.That(sut, Is.TypeOf<ReportVm>());
         }
     }
 }
