@@ -25,3 +25,12 @@ In Microsoft Visual Studio, click File menu **>** Open **>** Project/Solution (o
 ##### Project Structure Overview
 ---
 ![alt text](https://i.imgur.com/VgNZLAv.png "Project Structure")
+
+
+##### Output Console
+---
+![alt text](https://i.imgur.com/s1b3G03.png "Output Console")
+
+##### Test Runs Successfully 
+---
+![alt text](https://i.imgur.com/4nCm4j0.png "Test Status")
